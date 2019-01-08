@@ -1,3 +1,11 @@
+/* .space{
+  height: 1000px;
+  width: 1000px;
+  background: url(../images/space-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 .planet{
   width: 60px;
   height:60px;
