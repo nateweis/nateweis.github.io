@@ -9,5 +9,8 @@
 .hoth{
   top:600px;
   left:400px;
-  background: grey;
+  background: url(../images/hoth.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+  transform: scale(1.5);
 }
