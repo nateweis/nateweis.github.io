@@ -11,7 +11,7 @@ $(() => {
 
 
 
-    $('div').on('click',(clkd) => {
+    $('.planet').on('click',(clkd) => {
       let i = $(clkd.currentTarget).attr('id')
 
       $.ajax(
