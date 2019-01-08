@@ -46,3 +46,22 @@ button{
   border-radius: 100%;
   transform: scale(1.5);
 }
+
+
+/*==========================*/
+/*------- Modal ----------*/
+/*==========================*/
+.modal{
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.text{
+  border: 8px solid gold;
+  background: white;
+  width:300px;
+  height: 300px;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  display: none;
+}
