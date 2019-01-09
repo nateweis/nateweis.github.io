@@ -19,7 +19,7 @@ $(() => {
     // $space.show()
     $space.css('zoom',zoom);
     if($space.css('zoom') >= 2){
-      $space.css('background','darkgreen')
+      // $space.css('background','darkgreen')
     }
   }
   const zoomOut = () => {
@@ -28,7 +28,7 @@ $(() => {
       // $space.show()
       $space.css('zoom',zoom);
       if($space.css('zoom') < 2){
-        $space.css('background','steelblue')
+        // $space.css('background','steelblue')
       }
     }
     // else{
@@ -60,13 +60,16 @@ $(() => {
            $text.append($close,$h2).show()
 
            // /// Looping through the urls to add to the modal info////
+           const $ul = $('<ul>')
+           const $h4 = $('<h4>').text('Planet Residents:')
+           $ul.append($h4)
+
            for (let j = 0; j < data.results[i].residents.length; j++) {
              $.ajax(
                {
                  url: data.results[i].residents[j]
                }
              ).then((newData) => {
-               const $ul = $('<ul>')
                const $li = $('<li>').text(newData.name)
                $ul.append($li)
                $text.append($ul)
@@ -78,7 +81,7 @@ $(() => {
                  const $back = $('<span>').text('back')
                  $back.appendTo($text)
 
-                 // //// Back Button Functionality /////
+                 // //// Back Button Functionality For Modal /////
                  $back.on('click',() => {
                    $back.remove()
                    $ul.show()

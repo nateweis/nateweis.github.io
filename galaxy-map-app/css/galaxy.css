@@ -1,10 +1,13 @@
+body{
+  background: black;
+}
 .space{
-  height: 1000px;
-  width: 1000px;
-  /* background: url(../images/space-3.jpg);
+  height: 2000px;
+  width: 2000px;
+  background: url(../images/space-3.jpg);
   background-repeat: no-repeat;
-  background-size: cover; */
-  background: steelblue;
+  background-size: cover;
+  /* background: steelblue; */
 }
 
 /*==========================*/
@@ -13,6 +16,7 @@
 button{
   font-size: 30px;
   border-radius: 40%;
+  z-index: 5;
   outline:none;
 }
 #zoom-in{
@@ -33,10 +37,7 @@ button{
 .planet{
   width: 60px;
   height:60px;
-  background: pink;
   position: absolute;
-  top: 300px;
-  left:44px;
 }
 .hoth{
   top:600px;
@@ -44,7 +45,69 @@ button{
   background: url(../images/hoth.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
-  transform: scale(1.5);
+}
+.alderaan{
+  top:900px;
+  left:600px;
+  background: url(../images/Alderaan.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.yavin-4{
+  top:100px;
+  left:140px;
+  background: url(../images/Yavin_IV.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.dagobah{
+  top:50px;
+  left:950px;
+  background: url(../images/dagobah.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.bespin{
+  top:500px;
+  left:740px;
+  background: url(../images/bespin.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.endor{
+  top:1500px;
+  left:1000px;
+  background: url(../images/Endor.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.naboo{
+  top:160px;
+  left:1700px;
+  background: url(../images/Naboo.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.coruscant{
+  top:1800px;
+  left:1800px;
+  background: url(../images/Coruscant.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.kanino{
+  top:1000px;
+  left:1500px;
+  background: url(../images/Kamino.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.geonosis{
+  top:1000px;
+  left:200px;
+  background: url(../images/geonosis-2.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
 }
 
 
@@ -58,10 +121,14 @@ button{
 .text{
   border: 8px solid gold;
   background: white;
-  width:300px;
-  height: 300px;
+  width:200px;
+  height: 400px;
   position: fixed;
-  top: 30%;
-  left: 30%;
+  top: 20%;
+  left: 15%;
+  z-index: 5;
   display: none;
+}
+.text p {
+  float: right;
 }
