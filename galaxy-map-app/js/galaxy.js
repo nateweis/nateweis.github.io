@@ -56,8 +56,13 @@ $(() => {
        ).then((data) => {
           // for (var i = 0; i < data.results.length; i++) {
           const $h2 = $('<h2>').text(data.results[i].name)
-             console.log(data.results[i].name)
-             $text.append($h2).show()
+             const $close = $('<p>').text("X")
+             $text.append($close,$h2).show()
+
+             // close modal Button
+             $close.on('click',() => {
+               $text.hide()
+             })
           // }
          },
          () => {
