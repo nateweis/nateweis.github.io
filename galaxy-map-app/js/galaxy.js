@@ -1,4 +1,10 @@
 $(() => {
+  // //////////////////////////////////////////
+  // Arry Of Img for modal background
+  // /////////////////////////////////////////
+  const modalBackgrounds = [
+    'url(../images/landscapes/alderaan-landscape.jpeg)',
+  ]
 
   // //////////////////////////////////////////
   // Dom Selectors
@@ -73,6 +79,10 @@ $(() => {
     $('.planet').on('click',(clkd) => {
       let i = $(clkd.currentTarget).attr('id')
       $text.empty()
+
+      // const $span = $('<span>').css('background',modalBackgrounds[0])
+      // $text.append($span)
+
       $.ajax(
          {
            url: 'https://swapi.co/api/planets'
@@ -83,10 +93,17 @@ $(() => {
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
 
+
            // /// Looping through the urls to add to the modal info////
            const $ul = $('<ul>')
            const $h4 = $('<h4>').text('Planet Residents:')
            $ul.append($h4)
+           $text.append($ul)
+
+           if(data.results[i].residents.length === 0){
+             const $p = $('<p>').text("No One Lives on this Planet")
+             $ul.append($p)
+           }
 
            for (let j = 0; j < data.results[i].residents.length; j++) {
              $.ajax(
@@ -96,7 +113,6 @@ $(() => {
              ).then((newData) => {
                const $li = $('<li>').text(newData.name)
                $ul.append($li)
-               $text.append($ul)
 
                // //// When Li is clicked more info appears ////
                $li.on('click',() => {
