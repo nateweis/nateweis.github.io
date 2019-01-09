@@ -59,7 +59,7 @@ $(() => {
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
 
-           // /// Looping through the urls to add to the modal ////
+           // /// Looping through the urls to add to the modal info////
            for (let j = 0; j < data.results[i].residents.length; j++) {
              $.ajax(
                {
@@ -70,6 +70,20 @@ $(() => {
                const $li = $('<li>').text(newData.name)
                $ul.append($li)
                $text.append($ul)
+
+               // //// When Li is clicked more info appears ////
+               $li.on('click',() => {
+                 console.log(newData);
+                 $ul.hide()
+                 const $back = $('<span>').text('back')
+                 $back.appendTo($text)
+
+                 // //// Back Button Functionality /////
+                 $back.on('click',() => {
+                   $back.remove()
+                   $ul.show()
+                 })
+               })
              },
              () => {
                console.log("Error");
@@ -88,5 +102,25 @@ $(() => {
     })
 
 
-
 })
+
+
+
+
+
+
+
+
+
+
+
+
+// //// Test For PPL, Only 10?????? //////////
+// /// For loop through all the planets and ppl if you want all ///
+// for (let k = 1; k < 80; k++) {
+//   $.ajax({url:'https://swapi.co/api/people/'+k}).then((ppl) => {
+//     console.log(ppl);
+//   },() => {
+//     console.log("Failed");
+//   })
+// }
