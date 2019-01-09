@@ -2,8 +2,9 @@ body{
   background: black;
 }
 .super-deep-space{
-  width: 800px;
-  height: 800px;
+  width: 600px;
+  height: 400px;
+  zoom: 2.5;
   background-image: url(../images/galaxy-2.jpeg);
   background-repeat: no-repeat;
   background-position: 10% 10%;

@@ -15,22 +15,26 @@ $(() => {
   // /////////////////////////////////////////
 
   let zoom = .2;
-  let zoomD = .4;
-  let zoomSD = 1;
+  let zoomD = .6;
+  let zoomSD = 2.5;
 
   // ///// Zoom In //////////////
   const zoomIn = () => {
     zoom += .2;
     zoomD += .2;
     zoomSD += .2;
+
     $space.css('zoom',zoom);
     $deepSpace.css('zoom',zoomD);
     $sDeepSpace.css('zoom',zoomSD);
-    if($space.css('zoom') >= .8){
+
+    if($space.css('zoom') >= .6){
       $deepSpace.show()
+      $sDeepSpace.hide()
     }
     if($space.css('zoom') >= 1.2){
       $space.show()
+      $deepSpace.hide()
     }
   }
 
@@ -40,15 +44,18 @@ $(() => {
       zoom -= .2;
       zoomD -= .2;
       zoomSD -= .2;
+
       $space.css('zoom',zoom);
       $deepSpace.css('zoom',zoomD);
       $sDeepSpace.css('zoom',zoomSD);
-      $deepSpace.css('zoom',zoom);
+
       if($space.css('zoom') < 1.2){
         $space.hide()
+        $deepSpace.show()
       }
-      if($space.css('zoom') < .8){
+      if($space.css('zoom') < .6){
         $deepSpace.hide()
+        $sDeepSpace.show()
       }
     }
   }
