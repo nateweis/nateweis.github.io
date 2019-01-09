@@ -54,16 +54,33 @@ $(() => {
            url: 'https://swapi.co/api/planets'
          }
        ).then((data) => {
-          // for (var i = 0; i < data.results.length; i++) {
+         // //////// adding planet info /////////////
           const $h2 = $('<h2>').text(data.results[i].name)
-             const $close = $('<p>').text("X")
-             $text.append($close,$h2).show()
+           const $close = $('<p>').text("X")
+           $text.append($close,$h2).show()
 
-             // close modal Button
-             $close.on('click',() => {
-               $text.hide()
+           // /// Looping through the urls to add to the modal ////
+           for (let j = 0; j < data.results[i].residents.length; j++) {
+             $.ajax(
+               {
+                 url: data.results[i].residents[j]
+               }
+             ).then((newData) => {
+               const $ul = $('<ul>')
+               const $li = $('<li>').text(newData.name)
+               $ul.append($li)
+               $text.append($ul)
+             },
+             () => {
+               console.log("Error");
              })
-          // }
+           }
+
+
+           ////// close modal Button /////////
+           $close.on('click',() => {
+             $text.hide()
+           })
          },
          () => {
            console.log("Error");
