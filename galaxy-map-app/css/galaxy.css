@@ -1,12 +1,29 @@
 body{
   background: black;
 }
+.super-deep-space{
+  width: 800px;
+  height: 800px;
+  background-image: url(../images/galaxy-2.jpeg);
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+}
+.deep-space{
+  width: 1000px;
+  height: 1000px;
+  background-image: url(../images/space-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
 .space{
   height: 2000px;
   width: 2000px;
+  zoom: .2;
   background: url(../images/space-3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: none;
   /* background: steelblue; */
 }
 

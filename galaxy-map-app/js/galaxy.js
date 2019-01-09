@@ -7,33 +7,50 @@ $(() => {
   const $out = $('#zoom-out')
   const $space = $('.space')
   const $text = $('.text')
+  const $deepSpace = $('.deep-space')
+  const $sDeepSpace = $('.super-deep-space')
 
   // //////////////////////////////////////////
   // Zoom Buttons Functionality
   // /////////////////////////////////////////
 
-  let zoom = 1;
+  let zoom = .2;
+  let zoomD = .4;
+  let zoomSD = 1;
 
+  // ///// Zoom In //////////////
   const zoomIn = () => {
-    zoom += .4;
-    // $space.show()
+    zoom += .2;
+    zoomD += .2;
+    zoomSD += .2;
     $space.css('zoom',zoom);
-    if($space.css('zoom') >= 2){
-      // $space.css('background','darkgreen')
+    $deepSpace.css('zoom',zoomD);
+    $sDeepSpace.css('zoom',zoomSD);
+    if($space.css('zoom') >= .8){
+      $deepSpace.show()
+    }
+    if($space.css('zoom') >= 1.2){
+      $space.show()
     }
   }
+
+  // ////// Zoom Out ///////////
   const zoomOut = () => {
-    if(zoom > .4){
-      zoom -= .4;
-      // $space.show()
+    if(zoom > .2){
+      zoom -= .2;
+      zoomD -= .2;
+      zoomSD -= .2;
       $space.css('zoom',zoom);
-      if($space.css('zoom') < 2){
-        // $space.css('background','steelblue')
+      $deepSpace.css('zoom',zoomD);
+      $sDeepSpace.css('zoom',zoomSD);
+      $deepSpace.css('zoom',zoom);
+      if($space.css('zoom') < 1.2){
+        $space.hide()
+      }
+      if($space.css('zoom') < .8){
+        $deepSpace.hide()
       }
     }
-    // else{
-    //   $space.hide()
-    // }
   }
 
   $in.on('click',zoomIn)
@@ -120,6 +137,11 @@ $(() => {
 
 // //// Test For PPL, Only 10?????? //////////
 // /// For loop through all the planets and ppl if you want all ///
+
+/* Note: If i want to add in more planets change the url from
+"planets" /to/ "planets/"+i   and change the planets name form
+data.resedents[i].name /to/ data.name */
+
 // for (let k = 1; k < 80; k++) {
 //   $.ajax({url:'https://swapi.co/api/people/'+k}).then((ppl) => {
 //     console.log(ppl);
