@@ -57,6 +57,11 @@ button{
   height:60px;
   position: absolute;
 }
+.new-planet{
+  width: 60px;
+  height:60px;
+  position: absolute;
+}
 .hoth{
   top:600px;
   left:400px;
