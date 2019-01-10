@@ -125,14 +125,20 @@ $(() => {
 
                // //// When Li is clicked more info appears ////
                $li.on('click',() => {
-                 console.log(newData);
+                 // console.log(newData);
                  $ul.hide()
                  const $back = $('<span>').text('back')
+                 const $ppl = $('<p>').text(`${newData.name} is a ${newData
+                 .height} centimeters tall ${newData.gender} with ${newData.eye_color} eyes, ${newData.skin_color} skin color,
+                  and ${newData.hair_color} hair. ${newData.name}'s birth year is
+                  ${newData.birth_year}.`)
                  $back.appendTo($text)
+                 $text.append($ppl)
 
                  // //// Back Button Functionality For Modal /////
                  $back.on('click',() => {
                    $back.remove()
+                   $ppl.remove()
                    $ul.show()
                  })
                })
