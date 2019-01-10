@@ -3,7 +3,16 @@ $(() => {
   // Arry Of Img for modal background
   // /////////////////////////////////////////
   const modalBackgrounds = [
-    'url(../images/landscapes/alderaan-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/alderaan-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/yavin-4-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
+    'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
   ]
 
   // //////////////////////////////////////////
@@ -80,7 +89,7 @@ $(() => {
       let i = $(clkd.currentTarget).attr('id')
       $text.empty()
 
-      // const $span = $('<span>').css('background',modalBackgrounds[0])
+      $text.css('background',modalBackgrounds[i])
       // $text.append($span)
 
       $.ajax(

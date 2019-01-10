@@ -138,6 +138,7 @@ button{
 
 .text{
   border: 8px solid gold;
+  color: gold;
   background: white;
   width:200px;
   height: 400px;
