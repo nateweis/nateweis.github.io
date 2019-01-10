@@ -1,11 +1,20 @@
 $(() => {
-  class Planets {
-    constructor(name) {
+
+  const $selected = $('.space').children()
+  const $makeShip = $('#recrute')
+  let health = 100;
+  let plt = 0;
+
+
+  class Ships{
+    constructor(name,power,pilot){
       this.name = name;
+      this.power = power;
+      this.pilot = pilot;
     }
   }
 
-  class Ships{
+  class Factory{
     constructor(){
 
     }
@@ -17,8 +26,7 @@ $('.space').append($deathStar)
 
 $deathStar.on('click',() => {
   alert('Click on the planet you want to attack')
-  // $('.game').show()
-  // gameStart()
+  gameStart()
 })
 
 
@@ -49,6 +57,13 @@ $deathStar.on('click',() => {
  // if time runs out first the attacked planet gets removed
 
 
+const randNum = () => {
+  plt = Math.random()*10
+}
+
+$makeShip.on('click',() => {
+  randNum()
+})
 
 
 
@@ -60,11 +75,12 @@ $deathStar.on('click',() => {
 
 
 
+const gameStart = () => {
+  $selected.on("click",(clkd) => {
+   $('.game').show()
+  })
 
-
-
-
-
+}
 
 
 

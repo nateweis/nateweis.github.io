@@ -102,6 +102,10 @@ $(() => {
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
 
+           // Mini Game Naming ///////////
+           const $game = $('<h2>').text(`Death Star is attacking planet ${data.results[i].name}`)
+           $('.game').append($game)
+
 
            // /// Looping through the urls to add to the modal info////
            const $ul = $('<ul>')
