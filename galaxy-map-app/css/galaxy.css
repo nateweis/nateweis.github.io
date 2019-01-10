@@ -65,70 +65,80 @@ button{
 .hoth{
   top:600px;
   left:400px;
-  background: url(../images/hoth.jpeg);
+  background: url(../images/planet-skins/hoth.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .alderaan{
   top:900px;
   left:600px;
-  background: url(../images/Alderaan.jpeg);
+  background: url(../images/planet-skins/Alderaan.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .yavin-4{
   top:100px;
   left:140px;
-  background: url(../images/Yavin_IV.jpeg);
+  background: url(../images/planet-skins/Yavin_IV.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .dagobah{
   top:50px;
   left:950px;
-  background: url(../images/dagobah.jpeg);
+  background: url(../images/planet-skins/dagobah.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .bespin{
   top:500px;
   left:740px;
-  background: url(../images/bespin.jpeg);
+  background: url(../images/planet-skins/bespin.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .endor{
   top:1500px;
   left:1000px;
-  background: url(../images/Endor.jpeg);
+  background: url(../images/planet-skins/Endor.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .naboo{
   top:160px;
   left:1700px;
-  background: url(../images/Naboo.jpeg);
+  background: url(../images/planet-skins/Naboo.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .coruscant{
   top:1800px;
   left:1800px;
-  background: url(../images/Coruscant.jpeg);
+  background: url(../images/planet-skins/Coruscant.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .kanino{
   top:1000px;
   left:1500px;
-  background: url(../images/Kamino.jpeg);
+  background: url(../images/planet-skins/Kamino.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
 .geonosis{
   top:1000px;
   left:200px;
-  background: url(../images/geonosis-2.jpeg);
+  background: url(../images/planet-skins/geonosis-2.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.death-star{
+  width: 60px;
+  height:60px;
+  position: absolute;
+  top:400px;
+  left:1900px;
+  background: url(../images/planet-skins/death-star.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
@@ -155,4 +165,19 @@ button{
 }
 .text p {
   float: right;
+}
+/*==========================*/
+/*------- Game Modal ----------*/
+/*==========================*/
+.game{
+  border: 8px solid gold;
+  color: gold;
+  background: white;
+  width:800px;
+  height: 800px;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  z-index: 7;
+  display: none;
 }

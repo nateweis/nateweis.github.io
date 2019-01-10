@@ -8,17 +8,6 @@ $(() => {
   let rl = 0;
   let plntAmount = Math.floor(Math.random()* 6) + 5;
 
-// class Planets {
-//   constructor() {
-//
-//   }
-// }
-//
-// class PlanetMaker{
-//   constructor(){
-//
-//   }
-// }
 
 // //////////////////////////////////////////
 // Functions
