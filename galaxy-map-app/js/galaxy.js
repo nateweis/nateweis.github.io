@@ -25,6 +25,7 @@ $(() => {
   const $deepSpace = $('.deep-space')
   const $sDeepSpace = $('.super-deep-space')
 
+
   // //////////////////////////////////////////
   // Zoom Buttons Functionality
   // /////////////////////////////////////////
@@ -88,6 +89,7 @@ $(() => {
     $('.planet').on('click',(clkd) => {
       let i = $(clkd.currentTarget).attr('id')
       $text.empty()
+      $('.game').empty()
 
       $text.css('background',modalBackgrounds[i])
       // $text.append($span)
@@ -103,9 +105,11 @@ $(() => {
            $text.append($close,$h2).show()
 
            // Mini Game Naming ///////////
-           const $game = $('<h2>').text(`Death Star is attacking planet ${data.results[i].name}`)
-           $('.game').append($game)
-
+           // const $game = $('<h2>').text(`Death Star is attacking planet ${data.results[i].name}`)
+           // const $recrute = $('<button>').attr('id','recrute').text('Recrute Ship')
+           // const $health = $('<h3>').html('The Death star has <span>100</span> health')
+           // $('.game').append($game,$recrute,$health)
+           // console.log("modal populated");
 
            // /// Looping through the urls to add to the modal info////
            const $ul = $('<ul>')
@@ -162,6 +166,9 @@ $(() => {
            console.log("Error");
          })
     })
+
+
+    // $('.planet').on('click',EventFunc.planetModal)
 
 
 })

@@ -1,62 +1,64 @@
-$(() => {
-  // //////////////////////////////////////////
-  // Variables
-  // /////////////////////////////////////////
-  const $selected = $('.space').children()
-  const $makeShip = $('#recrute')
-  let health = 100;
-  let plt = 0;
-  let n = 0;
-
-  const $deathStar = $('<div>').addClass('death-star')
-  $('.space').append($deathStar)
-
-  const type = ['VCX-100 light freighter','Y-wing Starfighter','X-wing Starfighter','B-wing Fighter','Alderaan Cruiser','Millennium Falcon']
-
-  // //////////////////////////////////////////
-  // Classes and Facories
-  // /////////////////////////////////////////
-  class Ships{
-    constructor(name,power,pilot){
-      this.name = name;
-      this.power = power;
-      this.pilot = pilot;
-    }
+// //////////////////////////////////////////
+// Classes and Facories
+// /////////////////////////////////////////
+class Ships{
+  constructor(name,power,pilot){
+    this.name = name;
+    this.power = power;
+    this.pilot = pilot;
   }
+}
 
-  class Factory{
-    constructor(){
-      this.fleet = []
-    }
-    generateShip(){
-      const newSpaceShip = new Ship(type[n],n + 5,plt)
-      this.fleet.push(newSpaceShip)
-    }
+
+class Factory{
+  constructor(){
+    this.fleet = []
   }
+  generateShip(){
+    const newSpaceShip = new Ship(type[n],n + 5,plt)
+    this.fleet.push(newSpaceShip)
+  }
+}
 
-  const rebals = new Factory()
 
-
-
-  // //////////////////////////////////////////
-  // Functions
-  // /////////////////////////////////////////
-  const randNum = () => {
+class MiniGame{
+  constructor(){
+    this.health= 100;
+    this.plt = 0;
+    this.n = 0;
+    this.$deathStar = $('<div>').addClass('death-star')
+    this.$selected = $('.space').children()
+    this.type = ['VCX-100 light freighter','Y-wing Starfighter','X-wing Starfighter','B-wing Fighter','Alderaan Cruiser','Millennium Falcon']
+    this.rebals = new Factory()
+  }
+  randNum (){
     plt = Math.random()*10
     n = Math.floor(Math.random()* type.length)
   }
-
-
-
-  const gameStart = () => {
-    $selected.on("click",(clkd) => {
-     // $('.game').show()
+  gameStart () {
+    $selected.one("click",(clkd) => {
+      const $makeShip = $('#recrute')
+      console.log($makeShip);
+      $('.text').hide()
+     $('.game').show()
+     $makeShip.on('click',() => {
+       randNum()
+       console.log("clicked the recrute btn");
+     })
      // $(clkd.currentTarget).remove()
     })
 
   }
+}
+
+let miniGame;
 
 
+$deathStar.on('click',() => {
+  miniGame = new MiniGame()
+  alert('Click on the planet you want to attack')
+  miniGame.gameStart()
+})
 
 
 
@@ -64,15 +66,6 @@ $(() => {
 // Event listenrs
 // /////////////////////////////////////////
 
-$makeShip.on('click',() => {
-  randNum()
-})
-
-
-$deathStar.on('click',() => {
-  alert('Click on the planet you want to attack')
-  gameStart()
-})
 
 
 
@@ -85,7 +78,10 @@ $deathStar.on('click',() => {
 
 
 
-})
+
+
+
+
 
 
 // //////////////////////////////////////////

@@ -7,7 +7,24 @@ $(() => {
   let rt = 0;
   let rl = 0;
   let plntAmount = Math.floor(Math.random()* 6) + 5;
-
+  let i = 0;
+  const skinArry = [
+    'url(../galaxy-map-app/images/planet-skins/planet-1.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-2.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-3.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-4.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-5.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-6.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-7.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-8.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-9.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/planet-10.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/bespin.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/Naboo.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/Coruscant.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/geonosis-2.jpeg)',
+    'url(../galaxy-map-app/images/planet-skins/Alderaan.jpeg)'
+  ]
 
 // //////////////////////////////////////////
 // Functions
@@ -17,6 +34,7 @@ const numberRandomizer = () => {
   plntAmount = Math.floor(Math.random()* 6) + 5;
   rt = (Math.floor(Math.random()* 1995) + 5) + "px";
   rl = (Math.floor(Math.random()* 1995) + 5) + "px";
+  i = (Math.floor(Math.random()* skinArry.length));
 }
 
 const makeMorePlanets = () => {
@@ -30,6 +48,7 @@ const makeMorePlanets = () => {
     $div.css('border-radius', '100%')
     $div.css('background-size', '62px 62px')
     $div.css('background', 'pink')
+    // $div.css('background', skinArry[i])
     $('.space').append($div)
 
 
@@ -48,6 +67,7 @@ const makeMorePlanets = () => {
     $('.new-planet').on('click',(clkd) => {
       let i = $(clkd.currentTarget).attr('id')
       $text.empty()
+      $('.game').empty()
 
       $text.css('background','url(../galaxy-map-app/images/galaxy.jpeg)')
 
@@ -63,8 +83,11 @@ const makeMorePlanets = () => {
            $text.append($close,$h2).show()
 
            // Mini Game Naming ///////////
-           const $game = $('<h2>').text(`Death Star is attacking planet ${data.name}`)
-           $('.game').append($game)
+           // const $game = $('<h2>').text(`Death Star is attacking planet ${data.name}`)
+           // const $recrute = $('<button>').attr('id','recrute').text('Recrute Ship')
+           // const $health = $('<h3>').html('The Death star has <span>100</span> health')
+           // $('.game').append($game,$recrute,$health)
+           // console.log("modal populated");
 
 
            // /// Looping through the urls to add to the modal info////
