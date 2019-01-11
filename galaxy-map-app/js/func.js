@@ -7,17 +7,20 @@ const EventFunc = {
 // //////////////////////////////////////
 // When Planet is cliked
 // //////////////////////////////////////
-EventFunc.planetModal = (clkd) => {
+ EventFunc.planetModal = (clkd) => {
   // assignig I for planet selecting
   let i = $(clkd.currentTarget).attr('id')
   VarObj.$text.empty()
   // $('.game').empty()
   console.log(i);
+  console.log(this);
 
   if(i>9){VarObj.$text.css('background','url(../galaxy-map-app/images/galaxy.jpeg)')}
   else{VarObj.$text.css('background',VarObj.modalBackgrounds[i])}
 
-  $.ajax({url: 'https://swapi.co/api/planets/'+ i}
+  $.ajax({url: 'https://swapi.co/api/planets/'+ i,
+  crossDomain: true
+  }
    ).then((data) => {
      // //////// adding planet info /////////////
       const $h2 = $('<h2>').text(data.name)
@@ -81,8 +84,8 @@ EventFunc.planetModal = (clkd) => {
          VarObj.$text.hide()
        })
      },
-     () => {
-       console.log("Error");
+     (error) => {
+       console.log(error);
      })
    }
 
@@ -135,6 +138,8 @@ EventFunc.planetModal = (clkd) => {
        }
      }
    }
+
+   
 
 
      // //////////////////////////////

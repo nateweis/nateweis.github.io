@@ -92,6 +92,8 @@ $(() => {
       $('.game').empty()
 
       $text.css('background',modalBackgrounds[i])
+      $text.css('background-repeat','no-repeat')
+      $text.css('background-size','100% 100%')
       // $text.append($span)
 
       $.ajax(
@@ -100,6 +102,7 @@ $(() => {
          }
        ).then((data) => {
          // //////// adding planet info /////////////
+
           const $h2 = $('<h2>').text(data.results[i].name)
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
@@ -174,8 +177,17 @@ $(() => {
 })
 
 
+/* This is a way to get to the next page
+ the original url only returns the first
+ 10 planets so instead of doing /+i I
+ could go to the next 10 planets by doing
+ /?page=2 and then page 3 by doing /?page=3
+ ect... */
 
-
+// .then($.ajax({url:'https://swapi.co/api/planets/?page=4',
+// success:(data) => {
+// console.log(data);
+// }}))
 
 
 
