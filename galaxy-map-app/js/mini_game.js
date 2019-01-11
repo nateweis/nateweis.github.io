@@ -1,11 +1,21 @@
 $(() => {
-
+  // //////////////////////////////////////////
+  // Variables
+  // /////////////////////////////////////////
   const $selected = $('.space').children()
   const $makeShip = $('#recrute')
   let health = 100;
   let plt = 0;
+  let n = 0;
 
+  const $deathStar = $('<div>').addClass('death-star')
+  $('.space').append($deathStar)
 
+  const type = ['VCX-100 light freighter','Y-wing Starfighter','X-wing Starfighter','B-wing Fighter','Alderaan Cruiser','Millennium Falcon']
+
+  // //////////////////////////////////////////
+  // Classes and Facories
+  // /////////////////////////////////////////
   class Ships{
     constructor(name,power,pilot){
       this.name = name;
@@ -16,13 +26,48 @@ $(() => {
 
   class Factory{
     constructor(){
-
+      this.fleet = []
+    }
+    generateShip(){
+      const newSpaceShip = new Ship(type[n],n + 5,plt)
+      this.fleet.push(newSpaceShip)
     }
   }
 
+  const rebals = new Factory()
 
-const $deathStar = $('<div>').addClass('death-star')
-$('.space').append($deathStar)
+
+
+  // //////////////////////////////////////////
+  // Functions
+  // /////////////////////////////////////////
+  const randNum = () => {
+    plt = Math.random()*10
+    n = Math.floor(Math.random()* type.length)
+  }
+
+
+
+  const gameStart = () => {
+    $selected.on("click",(clkd) => {
+     // $('.game').show()
+     // $(clkd.currentTarget).remove()
+    })
+
+  }
+
+
+
+
+
+// //////////////////////////////////////////
+// Event listenrs
+// /////////////////////////////////////////
+
+$makeShip.on('click',() => {
+  randNum()
+})
+
 
 $deathStar.on('click',() => {
   alert('Click on the planet you want to attack')
@@ -34,16 +79,31 @@ $deathStar.on('click',() => {
 
 
 
+
+
+
+
+
+
+})
+
+
+// //////////////////////////////////////////
+// Goals
+// /////////////////////////////////////////
+
+
+
 // Click DeathStar ///
-// when death star is clicked game modual pops up
-// can select planet you want to attack
-// after planet selected game begins
+// when death star is clicked game modual pops up ***
+// can select planet you want to attack ***
+// after planet selected game begins ***
 
 // Game ////
-// each planet has its own ships (normal ones)
-// ships are of certin types and these types have various firepower
-// each of these chips also have piolts (prbability of doing damage)
-// firelpower is based off ship type and piolts are numberRandomizer
+// each planet has its own ships (normal ones) *****
+// ships are of certin types and these types have various firepower **
+// each of these chips also have piolts (prbability of doing damage) **
+// firelpower is based off ship type and piolts are numberRandomizer ***
 
 // functionality ///
 /* you press a button to make a ship and based on the planet
@@ -55,40 +115,3 @@ $deathStar.on('click',() => {
  // if your attack gets through it does damage to the deathstar
  // if you get the deathstar damage to 0 deathstar is removed
  // if time runs out first the attacked planet gets removed
-
-
-const randNum = () => {
-  plt = Math.random()*10
-}
-
-$makeShip.on('click',() => {
-  randNum()
-})
-
-
-
-
-
-
-
-
-
-
-
-const gameStart = () => {
-  $selected.on("click",(clkd) => {
-   $('.game').show()
-  })
-
-}
-
-
-
-
-
-
-
-
-
-
-})
