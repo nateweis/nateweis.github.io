@@ -161,10 +161,23 @@ button{
   left: 15%;
   z-index: 5;
   display: none;
-  
+
 }
 .text p {
   float: right;
+}
+/*==========================*/
+/*---- Hyperdrive  Btn -----*/
+/*==========================*/
+#new-planets{
+  position: fixed;
+  top: 90%;
+  left: 40%;
+  font-size: 13px;
+  border-radius: 5%;
+  /* border: 2px solid gold; */
+  /* background: black; */
+  /* color: white; */
 }
 /*==========================*/
 /*------- Game Modal ----------*/

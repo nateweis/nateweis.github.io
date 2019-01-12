@@ -1,5 +1,11 @@
 $(() => {
   // //////////////////////////////////////////
+  // Variables
+  // /////////////////////////////////////////
+  let rt = 0;
+  let rl = 0;
+  let pg = 1;
+  // //////////////////////////////////////////
   // Arry Of Img for modal background
   // /////////////////////////////////////////
   const modalBackgrounds = [
@@ -24,6 +30,7 @@ $(() => {
   const $text = $('.text')
   const $deepSpace = $('.deep-space')
   const $sDeepSpace = $('.super-deep-space')
+  const $newPlnt = $('#new-planets')
 
 
   // //////////////////////////////////////////
@@ -98,11 +105,11 @@ $(() => {
 
       $.ajax(
          {
-           url: 'https://swapi.co/api/planets'
+           url: 'https://swapi.co/api/planets/?page='+pg
          }
        ).then((data) => {
          // //////// adding planet info /////////////
-
+         console.log(data);
           const $h2 = $('<h2>').text(data.results[i].name)
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
@@ -170,12 +177,20 @@ $(() => {
          })
     })
 
+    // //////////////////////////////////////////
+    // New Planets Btn (Hyperdrive)
+    // /////////////////////////////////////////
 
-    // $('.planet').on('click',EventFunc.planetModal)
+    $newPlnt.on('click',() => {
+      pg++;
+      if(pg > 6){
+        pg = 1;
+      }
+    })
 
 
 })
-
+  // $('.planet').on('click',EventFunc.planetModal)
 
 /* This is a way to get to the next page
  the original url only returns the first
