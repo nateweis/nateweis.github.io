@@ -1,5 +1,16 @@
+/*==========================*/
+/*----- Fonts -------*/
+/*==========================*/
+@font-face {
+  font-family: 'StarWars';
+  src: url(../fonts/Starjedi.ttf);
+}
+/*==========================*/
+/*----- Background -------*/
+/*==========================*/
 body{
   background: black;
+
 }
 .super-deep-space{
   width: 600px;
@@ -343,6 +354,9 @@ button{
 .text p:first-child {
   float: right;
 }
+.text h2{
+  font-family: 'StarWars';
+}
 /*==========================*/
 /*---- Hyperdrive  Btn -----*/
 /*==========================*/
@@ -387,5 +401,8 @@ button{
     top:15%;
     left:40%;
     font-size: 1.5em;
+  }
+  .text li{
+    list-style: none;
   }
 }
