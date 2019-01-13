@@ -34,6 +34,14 @@ $(() => {
 
 
   // //////////////////////////////////////////
+  // Functions
+  // /////////////////////////////////////////
+  const numberRandomizer = () => {
+    rt = (Math.floor(Math.random()* 1995) + 5) + "px";
+    rl = (Math.floor(Math.random()* 1995) + 5) + "px";
+  }
+
+  // //////////////////////////////////////////
   // Zoom Buttons Functionality
   // /////////////////////////////////////////
 
@@ -109,7 +117,7 @@ $(() => {
          }
        ).then((data) => {
          // //////// adding planet info /////////////
-         console.log(data);
+
           const $h2 = $('<h2>').text(data.results[i].name)
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
@@ -185,6 +193,12 @@ $(() => {
       pg++;
       if(pg > 6){
         pg = 1;
+      }
+
+      for (let i = 0; i < $('.planet').length; i++) {
+        numberRandomizer()
+        $('.planet').eq(i).css('top', rt)
+        $('.planet').eq(i).css('left', rl)
       }
     })
 
