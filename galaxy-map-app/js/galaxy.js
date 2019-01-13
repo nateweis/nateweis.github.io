@@ -5,9 +5,11 @@ $(() => {
   let rt = 0;
   let rl = 0;
   let pg = 1;
+  let sS = 0;
   // //////////////////////////////////////////
-  // Arry Of Img for modal background
+  // Arrys
   // /////////////////////////////////////////
+  // Modal Backgrounds ///////////////////////
   const modalBackgrounds = [
     'url(../galaxy-map-app/images/landscapes/alderaan-landscape.jpeg)',
     'url(../galaxy-map-app/images/landscapes/yavin-4-landscape.jpeg)',
@@ -21,6 +23,11 @@ $(() => {
     'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
   ]
 
+  // Planet Skins /////////////////////////////
+  const skins = ['alderaan','yavin-4','dagobah','bespin','endor','naboo',
+  'coruscant','kanino','geonosis','planet-1','planet-2','planet-3',
+'planet-4','planet-5','planet-6','planet-7','planet-8','planet-9','planet-10']
+
   // //////////////////////////////////////////
   // Dom Selectors
   // /////////////////////////////////////////
@@ -31,6 +38,7 @@ $(() => {
   const $deepSpace = $('.deep-space')
   const $sDeepSpace = $('.super-deep-space')
   const $newPlnt = $('#new-planets')
+  const $planets = $('.space').children()
 
 
   // //////////////////////////////////////////
@@ -39,6 +47,7 @@ $(() => {
   const numberRandomizer = () => {
     rt = (Math.floor(Math.random()* 1995) + 5) + "px";
     rl = (Math.floor(Math.random()* 1995) + 5) + "px";
+    sS = (Math.floor(Math.random()* skins.length));
   }
 
   // //////////////////////////////////////////
@@ -195,10 +204,14 @@ $(() => {
         pg = 1;
       }
 
-      for (let i = 0; i < $('.planet').length; i++) {
+      const plnLength = $planets.length - 1
+
+      for (let i = 0; i < plnLength; i++) {
         numberRandomizer()
         $('.planet').eq(i).css('top', rt)
         $('.planet').eq(i).css('left', rl)
+        $planets.eq(i).removeClass()
+        $planets.eq(i).addClass('planet '+skins[sS])
       }
     })
 

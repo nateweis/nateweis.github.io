@@ -57,11 +57,11 @@ button{
   height:60px;
   position: absolute;
 }
-.new-planet{
+/* .new-planet{
   width: 60px;
   height:60px;
   position: absolute;
-}
+} */
 .hoth{
   top:600px;
   left:400px;
@@ -129,6 +129,77 @@ button{
   top:1000px;
   left:200px;
   background: url(../images/planet-skins/geonosis-2.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-1{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-1.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-2{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-2.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-3{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-3.png);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-4{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-4.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-5{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-5.jpeg);
+  background-size: 65px 65px;
+  border-radius: 100%;
+  background-position: -3px -1px;
+}
+.planet-6{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-6.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-7{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-7.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-8{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-8.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-9{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-9.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-10{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-10.jpeg);
   background-size: 62px 62px;
   border-radius: 100%;
 }
