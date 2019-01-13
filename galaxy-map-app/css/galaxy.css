@@ -10,8 +10,9 @@ body{
   background-position: 10% 10%;
 }
 .deep-space{
-  width: 1000px;
+  width: 1500px;
   height: 1000px;
+  margin: auto;
   background-image: url(../images/space-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -295,9 +296,9 @@ button{
 /*==========================*/
 /*------- Modal ----------*/
 /*==========================*/
-.modal{
+/* .modal{
   background: rgba(0, 0, 0, 0.4);
-}
+} */
 
 .text{
   border: 8px solid gold;
@@ -309,9 +310,9 @@ button{
   left: 15%;
   z-index: 5;
   display: none;
-
+  padding: 3px;
 }
-.text p {
+.text p:first-child {
   float: right;
 }
 /*==========================*/
@@ -346,4 +347,17 @@ button{
 #recrute{
   position: relative;
   top: 600px;
+}
+/*==========================*/
+/*----- At Desktop Size -------*/
+/*==========================*/
+@media(min-width:1000px){
+  .text{
+    width:400px;
+    height:500px;
+    text-align: center;
+    top:15%;
+    left:40%;
+    font-size: 1.5em;
+  }
 }
