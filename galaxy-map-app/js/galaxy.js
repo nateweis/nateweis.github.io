@@ -11,22 +11,86 @@ $(() => {
   // /////////////////////////////////////////
   // Modal Backgrounds ///////////////////////
   const modalBackgrounds = [
-    'url(../galaxy-map-app/images/landscapes/alderaan-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/yavin-4-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
-    'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
+    [
+      'url(../galaxy-map-app/images/landscapes/alderaan-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/yavin-4-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
+    ],
+    [
+      'url(../galaxy-map-app/images/landscapes/utapau-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Mustafar-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Kashyyyk-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Polis-Massa-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Felucia-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Cato-Neimoidia-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Saleucami-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)'
+    ],
+    [
+      'url(../galaxy-map-app/images/landscapes/Corellia-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Nal-Hutta-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Dantooine-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Ord-Mantell-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Trandosha-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Mon-Cala-landscape.jpeg)'
+    ],
+    [
+      'url(../galaxy-map-app/images/landscapes/Chandrila-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Sullust-landscapepla.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Toydaria-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Malastare-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Dathomir-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Ryloth-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)'
+    ],
+    [
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
+    ],
+    [
+      'url(../galaxy-map-app/images/landscapes/alderaan-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/yavin-4-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
+    ]
   ]
 
   // Planet Skins /////////////////////////////
   const skins = ['alderaan','yavin-4','dagobah','bespin','endor','naboo',
   'coruscant','kanino','geonosis','planet-1','planet-2','planet-3',
-'planet-4','planet-5','planet-6','planet-7','planet-8','planet-9','planet-10']
+'planet-4','planet-5','planet-6','planet-7','planet-8','planet-9','planet-10',
+'planet-11','planet-12','planet-13','planet-14','planet-15','planet-16','planet-17',
+'planet-18','planet-19','planet-20','planet-21']
 
   // //////////////////////////////////////////
   // Dom Selectors
@@ -115,7 +179,7 @@ $(() => {
       $text.empty()
       $('.game').empty()
 
-      $text.css('background',modalBackgrounds[i])
+      $text.css('background',modalBackgrounds[pg-1][i])
       $text.css('background-repeat','no-repeat')
       $text.css('background-size','100% 100%')
       // $text.append($span)
@@ -126,7 +190,7 @@ $(() => {
          }
        ).then((data) => {
          // //////// adding planet info /////////////
-
+         console.log(data.results);
           const $h2 = $('<h2>').text(data.results[i].name)
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
