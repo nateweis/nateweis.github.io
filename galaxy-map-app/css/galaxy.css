@@ -281,6 +281,34 @@ button{
   background-size: 62px 62px;
   border-radius: 100%;
 }
+.planet-22{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-22.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-23{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-23.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-24{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-24.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
+.planet-25{
+  top:1000px;
+  left:200px;
+  background: url(../images/planet-skins/planet-25.jpeg);
+  background-size: 62px 62px;
+  border-radius: 100%;
+}
 .death-star{
   width: 60px;
   height:60px;
@@ -321,7 +349,7 @@ button{
 #new-planets{
   position: fixed;
   top: 90%;
-  left: 40%;
+  left: 50%;
   font-size: 13px;
   border-radius: 5%;
   /* border: 2px solid gold; */

@@ -28,6 +28,7 @@ The main html components consist of:
 <!--========= Modal =======-->
 <div class="text"></div>
 ```
+
 * a button to make new planets
 
 ```html
@@ -52,3 +53,29 @@ The main html components consist of:
 
 </div>
 ```
+
+## How the app works
+
+On load you will see a galaxy with 2 buttons on the right
+
+
+
+The plus button will zoom the image in, the minus will zoom the *img* back out
+
+
+
+Zooming in and out will change the screen
+
+
+
+If you zoom in enough you can start to see planets
+
+Clicking on one of these plantes will reveal a list of the planets inhabitants.
+
+
+
+Clicking on one of the inhabitants will provide with some more information about the subject
+
+
+
+If you want to see new planets you can click the **hyperdrive** button 

@@ -49,7 +49,7 @@ $(() => {
     ],
     [
       'url(../galaxy-map-app/images/landscapes/Chandrila-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/Sullust-landscapepla.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Sullust-landscape.jpeg)',
       'url(../galaxy-map-app/images/landscapes/Toydaria-landscape.jpeg)',
       'url(../galaxy-map-app/images/landscapes/Malastare-landscape.jpeg)',
       'url(../galaxy-map-app/images/landscapes/Dathomir-landscape.jpeg)',
@@ -62,26 +62,26 @@ $(() => {
     [
       'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
       'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
+      'url(../galaxy-map-app/images/landscapes/Glee-Anselm-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Iridonia-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Iktotch-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)'
     ],
     [
-      'url(../galaxy-map-app/images/landscapes/alderaan-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/yavin-4-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/hoth-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/dagobah-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/bespin-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/endor-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/naboo-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/coruscant-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/kanino-landscape.jpeg)',
-      'url(../galaxy-map-app/images/landscapes/geonosis-landscape.jpeg)'
+      'url(../galaxy-map-app/images/landscapes/Serenno-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Concord-Dawn-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/galaxy.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Skako-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Muunilinst-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Shili-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Kalee-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Umbara-landscape.jpeg)',
+      'url(../galaxy-map-app/images/landscapes/Tatooine-landscape.jpeg)'
     ]
   ]
 
@@ -90,7 +90,11 @@ $(() => {
   'coruscant','kanino','geonosis','planet-1','planet-2','planet-3',
 'planet-4','planet-5','planet-6','planet-7','planet-8','planet-9','planet-10',
 'planet-11','planet-12','planet-13','planet-14','planet-15','planet-16','planet-17',
-'planet-18','planet-19','planet-20','planet-21']
+'planet-18','planet-19','planet-20','planet-21','planet-22','planet-23',
+'planet-24','planet-25']
+
+// //////////////////// **** Pictures are from startwars.com, reddit, Wookipida,
+/////////////////////// **** and alien species fandom websites
 
   // //////////////////////////////////////////
   // Dom Selectors
