@@ -132,9 +132,9 @@ $(() => {
     zoomD += .2;
     zoomSD += 2;
 
-    $space.css('zoom',zoom);
-    $deepSpace.css('zoom',zoomD);
-    $sDeepSpace.css('zoom',zoomSD);
+    $space.animate({zoom:zoom},1000);
+    $deepSpace.animate({zoom:zoomD},1000);
+    $sDeepSpace.animate({zoom:zoomSD},2000);
 
     if($space.css('zoom') >= .8){
       $deepSpace.show()
@@ -153,9 +153,9 @@ $(() => {
       zoomD -= .2;
       zoomSD -= 2;
 
-      $space.css('zoom',zoom);
-      $deepSpace.css('zoom',zoomD);
-      $sDeepSpace.css('zoom',zoomSD);
+      $space.animate({zoom:zoom},1000);
+      $deepSpace.animate({zoom:zoomD},1000);
+      $sDeepSpace.animate({zoom:zoomSD},2000);
 
       if($space.css('zoom') < 1.4){
         $space.hide()
@@ -271,6 +271,8 @@ $(() => {
       if(pg > 6){
         pg = 1;
       }
+      $space.animate({zoom:'+=50'},50);
+      $space.animate({zoom:'-=50'},50);
 
       const plnLength = $planets.length - 1
 
@@ -278,6 +280,8 @@ $(() => {
         numberRandomizer()
         $('.planet').eq(i).css('top', rt)
         $('.planet').eq(i).css('left', rl)
+        $('.planet').eq(i).css('transition-property','all')
+        $('.planet').eq(i).css('transition-duration','.3s')
         $planets.eq(i).removeClass()
         $planets.eq(i).addClass('planet '+skins[sS])
       }

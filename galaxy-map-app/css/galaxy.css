@@ -19,6 +19,7 @@ body{
   background-image: url(../images/galaxy-2.jpeg);
   background-repeat: no-repeat;
   background-position: 10% 10%;
+  transition: transform 1s;
 }
 .deep-space{
   width: 1500px;
