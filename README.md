@@ -82,3 +82,12 @@ Clicking on one of the inhabitants will provide with some more information about
 If you want to see new planets you can click the **hyperdrive** button
 
 ![new planets](info-img/more-planets.gif)
+
+## Of note:
+This project consist of 4 files in the `js folder`. Only one of these files are currently of use, the  `galaxy.js`.
+
+2 of the other 3 files:   
+`func.js` and `vars.js` were the beginning attempts at refactoring code, but it seems they are in the wrong headspace and I need to start implementing **_import_** and  **_export_** for it to work.
+
+The 3rd file is the mini game I started making. The mini game had to be put on hold until I refactored the code correctly.  
+The refactoring didn't get completed because of a headspace problem I had with the api, but the original `galaxy.js` was adjusted so that now when Im to take up this code again, I could put the mini game in `galaxy.js`
