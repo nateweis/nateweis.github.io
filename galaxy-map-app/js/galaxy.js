@@ -179,47 +179,47 @@ $(() => {
     // /////////////////////////////////////////
 
     $('.planet').on('click',(clkd) => {
+      // selects planet by ID
       let i = $(clkd.currentTarget).attr('id')
+      // clears the modal or old info
       $text.empty()
-      $('.game').empty()
 
+      // adds background style to modal
       $text.css('background',modalBackgrounds[pg-1][i])
       $text.css('background-repeat','no-repeat')
       $text.css('background-size','100% 100%')
-      // $text.append($span)
 
+      // star wars api
       $.ajax(
          {
            url: 'https://swapi.co/api/planets/?page='+pg
          }
        ).then((data) => {
          // //////// adding planet info /////////////
-         console.log(data.results);
+         // //////// planet name and x button /////////////
+
           const $h2 = $('<h2>').text(data.results[i].name)
            const $close = $('<p>').text("X")
            $text.append($close,$h2).show()
 
-           // Mini Game Naming ///////////
-           // const $game = $('<h2>').text(`Death Star is attacking planet ${data.results[i].name}`)
-           // const $recrute = $('<button>').attr('id','recrute').text('Recrute Ship')
-           // const $health = $('<h3>').html('The Death star has <span>100</span> health')
-           // $('.game').append($game,$recrute,$health)
-           // console.log("modal populated");
-
            // /// Looping through the urls to add to the modal info////
+           // made a ul and a h4 for modal
            const $ul = $('<ul>')
            const $h4 = $('<h4>').text('Planet Residents:')
            $ul.append($h4)
            $text.append($ul)
 
+           // prints "no one lives here" if planet is empty
            if(data.results[i].residents.length === 0){
              const $p = $('<p>').text("No One Lives on this Planet")
              $ul.append($p)
            }
 
+           // loops through all the names on the planet
            for (let j = 0; j < data.results[i].residents.length; j++) {
              $.ajax(
                {
+                 // the first ajax gave back a url so use the info to call another ajax
                  url: data.results[i].residents[j]
                }
              ).then((newData) => {
@@ -228,13 +228,14 @@ $(() => {
 
                // //// When Li is clicked more info appears ////
                $li.on('click',() => {
-                 // console.log(newData);
                  $ul.hide()
+
                  const $back = $('<span>').text('back')
                  const $ppl = $('<p>').text(`${newData.name} is a ${newData
                  .height} centimeters tall ${newData.gender} with ${newData.eye_color} eyes, ${newData.skin_color} skin color,
                   and ${newData.hair_color} hair. ${newData.name}'s birth year is
                   ${newData.birth_year}.`)
+
                  $back.appendTo($text)
                  $text.append($ppl)
 
@@ -267,15 +268,18 @@ $(() => {
     // /////////////////////////////////////////
 
     $newPlnt.on('click',() => {
+      // carosells through the planets
       pg++;
       if(pg > 6){
         pg = 1;
       }
+      // a bit of "warp" animation
       $space.animate({zoom:'+=50'},50);
       $space.animate({zoom:'-=50'},50);
 
       const plnLength = $planets.length - 1
 
+      // changes planets location (coordinates), and skin
       for (let i = 0; i < plnLength; i++) {
         numberRandomizer()
         $('.planet').eq(i).css('top', rt)
@@ -289,38 +293,3 @@ $(() => {
 
 
 })
-  // $('.planet').on('click',EventFunc.planetModal)
-
-/* This is a way to get to the next page
- the original url only returns the first
- 10 planets so instead of doing /+i I
- could go to the next 10 planets by doing
- /?page=2 and then page 3 by doing /?page=3
- ect... */
-
-// .then($.ajax({url:'https://swapi.co/api/planets/?page=4',
-// success:(data) => {
-// console.log(data);
-// }}))
-
-
-
-
-
-
-
-
-// //// Test For PPL, Only 10?????? //////////
-// /// For loop through all the planets and ppl if you want all ///
-
-/* Note: If i want to add in more planets change the url from
-"planets" /to/ "planets/"+i   and change the planets name form
-data.resedents[i].name /to/ data.name */
-
-// for (let k = 1; k < 80; k++) {
-//   $.ajax({url:'https://swapi.co/api/people/'+k}).then((ppl) => {
-//     console.log(ppl);
-//   },() => {
-//     console.log("Failed");
-//   })
-// }

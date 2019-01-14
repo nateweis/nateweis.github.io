@@ -66,12 +66,20 @@ $deathStar.on('click',() => {
 // Event listenrs
 // /////////////////////////////////////////
 
+  // ////// to clear the minigame text modal //////
+  // $('.game').empty()
 
 
+////////////////////////////////////////////
+// Mini Game Naming ///////////////////////
+// Add this 2 planet click function //////
+////////////////////////////////////////
 
-
-
-
+// const $game = $('<h2>').text(`Death Star is attacking planet ${data.results[i].name}`)
+// const $recrute = $('<button>').attr('id','recrute').text('Recrute Ship')
+// const $health = $('<h3>').html('The Death star has <span>100</span> health')
+// $('.game').append($game,$recrute,$health)
+// console.log("modal populated");
 
 
 
