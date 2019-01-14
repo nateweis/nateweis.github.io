@@ -62,7 +62,7 @@ On load you will see a galaxy with 2 buttons on the right
 
 The plus button will zoom the image in, the minus will zoom the *img* back out
 
-
+![first screen] (info-img/first-screen.png)
 
 Zooming in and out will change the screen
 
@@ -78,4 +78,4 @@ Clicking on one of the inhabitants will provide with some more information about
 
 
 
-If you want to see new planets you can click the **hyperdrive** button 
+If you want to see new planets you can click the **hyperdrive** button
