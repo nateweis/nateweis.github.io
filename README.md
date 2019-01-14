@@ -55,6 +55,16 @@ The main html components consist of:
 </div>
 ```
 
+## JavaScript
+The buttons and planets have event handlers on them
+
+The planet event handler is extensive.   
+It starts off emptying and styling the modal.
+
+It then accesses the star wars api by planet.
+
+Finally it populates the modal with the planets information
+
 ## How the app works
 
 On load you will see a galaxy with 2 buttons on the right
@@ -65,23 +75,21 @@ The plus button will zoom the image in, the minus will zoom the *img* back out
 
 Zooming in and out will change the screen
 
-![screen change](info-img/2r2ivr.gif )
 
 If you zoom in enough you can start to see planets
 
-![planets-appear](info-img/planets-show.gif )
+![](info-img/planets-show.gif)
 
 Clicking on one of these plantes will reveal a list of the planets inhabitants.
 
-![planet click](info-img/planet-click.gif)
+
 
 Clicking on one of the inhabitants will provide with some more information about the subject
 
-![li click](info-img/click-li.gif)
 
 If you want to see new planets you can click the **hyperdrive** button
 
-![new planets](info-img/more-planets.gif)
+
 
 ## Of note:
 This project consist of 4 files in the `js folder`. Only one of these files are currently of use, the  `galaxy.js`.
