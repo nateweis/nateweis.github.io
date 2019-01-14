@@ -20,9 +20,10 @@ The main html components consist of:
 ```HTML
 <!--=== Zoom Button ======-->
 <button id='zoom-out'> - </button>
-<button id='zoom-in'> + </button>```
+<button id='zoom-in'> + </button>
+```
 
-* a modal
++ a modal
 
 ```HTML
 <!--========= Modal =======-->
@@ -58,24 +59,26 @@ The main html components consist of:
 
 On load you will see a galaxy with 2 buttons on the right
 
-
-
 The plus button will zoom the image in, the minus will zoom the *img* back out
 
-![first screen] (info-img/first-screen.png)
+![first screen](info-img/first-screen.png )
 
 Zooming in and out will change the screen
 
-
+![screen change](info-img/2r2ivr.gif )
 
 If you zoom in enough you can start to see planets
 
+![planets-appear](info-img/planets-show.gif )
+
 Clicking on one of these plantes will reveal a list of the planets inhabitants.
 
-
+![planet click](info-img/planet-click.gif)
 
 Clicking on one of the inhabitants will provide with some more information about the subject
 
-
+![li click](info-img/click-li.gif)
 
 If you want to see new planets you can click the **hyperdrive** button
+
+![new planets](info-img/more-planets.gif)
